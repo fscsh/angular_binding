@@ -2,7 +2,7 @@
     <div class = "panel-heading">{{ element.name }}</div>
     <div class = "panel-body">
         <p>
-            <strong *ngif = "element.type === 'serve'" style = "color:red">
+            <strong *ngif = "element.type === 'server'" style = "color:red">
                 {{ element.content }}
             </strong>
             <em *ngif = "element.type === 'blueprint'"> {{ element.content }}</em>
