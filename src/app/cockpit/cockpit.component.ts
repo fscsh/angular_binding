@@ -13,14 +13,18 @@ export class CockpitComponent implements OnInit {
     newServerContent = "";
     @ViewChild('serverContentInput') serverContentInput: ElementRef;
 
-  onAddServer(serverNameInput){
+    ngOnInit(){
+
+    }
+
+    onAddServer(serverNameInput){
       this.serverCreated.emit({
           serverName: serverNameInput.value,
           serverContent: this.serverContentInput.nativeElement.value
       })
   }
 
-  onAddBlueprint(){
+    onAddBlueprint(){
       this.blueprintCreated.emit({
           serverName: this.newServerName,
           serverContent: this.newServerContent
