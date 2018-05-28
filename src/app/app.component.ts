@@ -28,4 +28,7 @@ export class AppComponent {
     onchangeFirst(){
         this.serverElements[0].name = "Change!!"
     }
+    odds = [1,3,5];
+    evens = [2,4,6];
+    OnlyOdd = false;
 }

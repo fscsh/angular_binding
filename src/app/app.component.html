@@ -13,4 +13,20 @@
             [name] = " Element.name "></app-server-element>
         </div>
     </div>
+    <div>
+        <button class = "list-group" (click) = "OnlyOdd = !OnlyOdd">
+            OnlyOdd
+        </button>
+        <div *ngIf = "OnlyOdd">
+            <li class = "list-group-item" *ngFor = "let odd of odds">
+                {{ odd }}
+            </li>
+        </div>
+        <div *ngIf = "!OnlyOdd">
+            <li class = "list-group-item" *ngFor = "let even of evens">
+                {{ even }}
+            </li>
+        </div>
+    </div>
+    <p appHighlight>  Try highlight</p>
 </div>
