@@ -23,4 +23,7 @@ export class AppComponent {
             content: blueprintData.serverContent
         })
     }
+    onchangeFirst(){
+        this.serverElements[0].name = "Change!!"
+    }
 }
