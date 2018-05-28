@@ -9,6 +9,7 @@ export class AppComponent {
     serverElements = [{ type: 'server', name:'TestServer', content: 'Just a test,haha'}];
 
     onServerAdded(serverData: { serverName: string, serverContent: string}){
+        console.log('SV',this.serverElements)
         this.serverElements.push({
             type:'server',
             name: serverData.serverName,
@@ -17,6 +18,7 @@ export class AppComponent {
     }
 
     onBlueprintAdded(blueprintData: { serverName: string, serverContent: string}){
+        console.log('BP',this.serverElements)
         this.serverElements.push({
             type: 'blueprint',
             name: blueprintData.serverName,
