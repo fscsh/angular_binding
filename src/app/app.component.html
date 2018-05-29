@@ -14,7 +14,7 @@
         </div>
     </div>
     <div>
-        <button class = "list-group" (click) = "OnlyOdd = !OnlyOdd">
+        <button class = "btn btn-danger" (click) = "OnlyOdd = !OnlyOdd">
             OnlyOdd
         </button>
         <div *ngIf = "OnlyOdd">
@@ -27,6 +27,21 @@
                 {{ even }}
             </li>
         </div>
+        <ng-template [ngIf] = "!OnlyOdd">
+            <div *ngIf = "!OnlyOdd">
+                <li class = "list-group-item" *ngFor = "let even of evens">
+                    {{ even }}
+                </li>
+            </div>
+        </ng-template>
     </div>
-    <p appHighlight>  Try highlight</p>
+    <p appHighlight [defaultColor] = "'yellow'" [highlightColor] = "'red'">  Try highlight</p>
+    <button class = "btn btn-danger " (click) = "onStart()"> setTimeInterval</button>
+    <div [ngSwitch] = "value">
+        <p *ngSwitchCase ="5">Value is 5</p>
+        <p *ngSwitchCase ="8">Value is 8</p>
+        <p *ngSwitchCase ="12">Value is 12</p>
+        <p *ngSwitchDefault>Value is default</p>
+    </div>
+    <button class = "btn-primary" (click) = "onStop()"> Stop</button>
 </div>

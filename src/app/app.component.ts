@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     serverElements = [{ type: 'server', name:'TestServer', content: 'Just a test,haha'}];
-
+    interval;
+    value : number = 0;
     onServerAdded(serverData: { serverName: string, serverContent: string}){
         console.log('SV',this.serverElements)
         this.serverElements.push({
@@ -31,4 +32,13 @@ export class AppComponent {
     odds = [1,3,5];
     evens = [2,4,6];
     OnlyOdd = false;
+    onStart(){
+        this.interval = setInterval(()=>{
+            this.value++;
+            console.log(this.value)
+        },1000)
+    }
+    onStop(){
+        clearInterval(this.interval)
+    }
 }
