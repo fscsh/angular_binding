@@ -13,11 +13,9 @@ export class HighlightDirective implements OnInit{
       this.backgroundColor = this.defaultColor;
   }
   @HostListener('mouseenter') mouseover(eventData: Event){
-      // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color','yellow')
       this.backgroundColor = this.highlightColor
   }
   @HostListener('mouseleave') mouseleave(eventData: Event){
-      // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color','transparent')
       this.backgroundColor = this.defaultColor;
   }
 }

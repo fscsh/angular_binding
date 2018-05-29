@@ -36,12 +36,13 @@
         </ng-template>
     </div>
     <p appHighlight [defaultColor] = "'yellow'" [highlightColor] = "'red'">  Try highlight</p>
-    <button class = "btn btn-danger " (click) = "onStart()"> setTimeInterval</button>
+    <button class = "btn btn-secondary " (click) = "onStart()"> setTimeInterval</button>
+    <button class = "btn btn-success" (click) = "onStop()"> Stop</button>
     <div [ngSwitch] = "value">
         <p *ngSwitchCase ="5">Value is 5</p>
         <p *ngSwitchCase ="8">Value is 8</p>
         <p *ngSwitchCase ="12">Value is 12</p>
         <p *ngSwitchDefault>Value is default</p>
     </div>
-    <button class = "btn-primary" (click) = "onStop()"> Stop</button>
+
 </div>
